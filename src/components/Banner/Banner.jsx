@@ -4,7 +4,9 @@ function Banner() {
   return (
     <div className="banner-container">
       <div className="banner">
-        <img className="banner-photo" src={banner} alt="bannière paysage" />
+        <div className="photo-container">
+          <img className="banner-photo" src={banner} alt="bannière paysage" />
+        </div>
         <p className="banner-text">Chez vous, partout et ailleurs</p>
       </div>
     </div>
