@@ -1,0 +1,8 @@
+.card-logement {
+  position: relative;
+  display: flex;
+  width: 335px;
+  height: 255px;
+  min-width: 335px;
+  transition: transform 1s;
+}

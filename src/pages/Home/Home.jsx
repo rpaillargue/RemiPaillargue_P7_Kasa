@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner/Banner";
 import "../../components/Banner/banner.css";
 import { useEffect, useState } from "react";
+import Card from "../../components/Card/Card";
 
 function Home() {
   const [logements, setLogements] = useState([]);
@@ -20,7 +21,14 @@ function Home() {
   return (
     <div>
       <Banner />
-      {!isLoading && logements.map((logement) => <p>{logement.title}</p>)}
+      {!isLoading &&
+        logements.map((logement) => (
+          <Card
+            title={logement.title}
+            cover={logement.cover}
+            id={logement.id}
+          />
+        ))}
     </div>
   );
 }
