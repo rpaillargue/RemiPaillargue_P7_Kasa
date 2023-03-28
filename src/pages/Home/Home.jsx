@@ -2,6 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import "../../components/Banner/banner.css";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
+import "../../components/Card/card.css";
 
 function Home() {
   const [logements, setLogements] = useState([]);
@@ -23,11 +24,13 @@ function Home() {
       <Banner />
       {!isLoading &&
         logements.map((logement) => (
-          <Card
-            title={logement.title}
-            cover={logement.cover}
-            id={logement.id}
-          />
+          <section className="logement-container">
+            <Card
+              title={logement.title}
+              cover={logement.cover}
+              id={logement.id}
+            />
+          </section>
         ))}
     </div>
   );

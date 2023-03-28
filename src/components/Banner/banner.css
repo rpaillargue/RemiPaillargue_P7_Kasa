@@ -3,6 +3,9 @@
 .banner-container {
   display: flex;
   justify-content: center;
+  width: 1240px;
+  height: 233px;
+  margin: 0 auto;
 }
 
 .banner {
@@ -15,8 +18,8 @@
 }
 
 .photo-container {
-  width: 1240px;
-  height: 233px;
+  width: 100%;
+  height: 100%;
 }
 
 .banner-photo {
