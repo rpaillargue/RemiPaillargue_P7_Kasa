@@ -22,16 +22,16 @@ function Home() {
   return (
     <div>
       <Banner />
-      {!isLoading &&
-        logements.map((logement) => (
-          <section className="logement-container">
+      <div className="logement-container">
+        {!isLoading &&
+          logements.map((logement) => (
             <Card
               title={logement.title}
               cover={logement.cover}
               id={logement.id}
             />
-          </section>
-        ))}
+          ))}
+      </div>
     </div>
   );
 }

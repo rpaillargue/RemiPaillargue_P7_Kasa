@@ -9,6 +9,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 50px;
+  width: 1240px;
+  margin: 0 auto;
 }
 
 .logo-header {
@@ -36,7 +38,6 @@ body {
 
 .nav-header-link:hover {
   border-bottom: 2px solid #ff6060;
-  padding-bottom: 5px;
 }
 
 @media screen and (max-width: 375px) {
