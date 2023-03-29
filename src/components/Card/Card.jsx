@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 function Card({ title, cover, id }) {
   return (
-    <Link to={`/fichelogement/${id}`} className="card-link">
-      <article className="card-logement">
+    <article className="card-logement">
+      <Link to={`/fichelogement/${id}`} className="card-link">
         <img src={cover} alt="location" />
         <div className="card-shadow"></div>
         <p className="card-logement-title">{title}</p>
-      </article>
-    </Link>
+      </Link>
+    </article>
   );
 }
 

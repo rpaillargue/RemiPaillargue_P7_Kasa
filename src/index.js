@@ -6,6 +6,7 @@ import About from "./pages/About/About";
 import FicheLogement from "./pages/FicheLogement/FicheLogement";
 import Error from "./pages/Error/Error";
 import Layout from "./components/Layout/Layout";
+import "./components/utils.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

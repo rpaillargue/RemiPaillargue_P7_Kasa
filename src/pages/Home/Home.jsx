@@ -22,15 +22,17 @@ function Home() {
   return (
     <div>
       <Banner />
-      <div className="logement-container">
-        {!isLoading &&
-          logements.map((logement) => (
-            <Card
-              title={logement.title}
-              cover={logement.cover}
-              id={logement.id}
-            />
-          ))}
+      <div className="padding-cotes">
+        <div className="logement-container">
+          {!isLoading &&
+            logements.map((logement) => (
+              <Card
+                title={logement.title}
+                cover={logement.cover}
+                id={logement.id}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );

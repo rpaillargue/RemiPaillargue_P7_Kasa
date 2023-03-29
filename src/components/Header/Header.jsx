@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="header">
+    <div className="header padding-cotes">
       <img className="logo-header" src={logo} alt="logo de kasa" />
       <nav className="nav-header">
         <Link to="/" className="nav-header-link">

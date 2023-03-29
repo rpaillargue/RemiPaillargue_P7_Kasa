@@ -8,8 +8,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
-  width: 1240px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin: 0 auto;
 }
 

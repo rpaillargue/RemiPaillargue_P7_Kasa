@@ -2,26 +2,22 @@
 
 .logement-container {
   background-color: #f2f2f2;
-  width: 100%;
-  max-width: 1240px;
   border-radius: 10px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 50px;
+  column-gap: 60px;
+  padding: 50px;
 }
 
 .card-logement {
   border-radius: 10px;
-  width: 340px;
   height: 340px;
-  margin: 20px;
+  width: 30%;
   overflow: hidden;
   position: relative;
-}
-
-.card-logement:hover {
-  background: linear-gradient(180deg, #ff6060 85%, #000000a6 100%);
 }
 
 .card-logement img {
@@ -43,19 +39,19 @@
 
 .card-logement-title {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   left: 20px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
   font-family: Montserrat, sans-serif;
   line-height: 26px;
-  width: 300px;
+  width: 40%;
   height: 52px;
 }
 
-.card-link:hover .card-logement {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+.card-logement:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 1200px) {
