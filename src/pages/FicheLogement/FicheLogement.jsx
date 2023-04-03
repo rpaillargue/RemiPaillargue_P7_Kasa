@@ -1,9 +1,5 @@
 function FicheLogement() {
-  return (
-    <div>
-      <div>Fiche Logement</div>
-    </div>
-  );
+  return <div className="fiche-container"></div>;
 }
 
 export default FicheLogement;

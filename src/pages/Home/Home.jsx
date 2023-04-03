@@ -20,19 +20,17 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="section-container">
       <Banner />
-      <div className="padding-cotes">
-        <div className="logement-container">
-          {!isLoading &&
-            logements.map((logement) => (
-              <Card
-                title={logement.title}
-                cover={logement.cover}
-                id={logement.id}
-              />
-            ))}
-        </div>
+      <div className="logement-container">
+        {!isLoading &&
+          logements.map((logement) => (
+            <Card
+              title={logement.title}
+              cover={logement.cover}
+              id={logement.id}
+            />
+          ))}
       </div>
     </div>
   );

@@ -45,3 +45,44 @@
   font-size: 48px;
   color: #ffffff;
 }
+
+@media only screen and (max-width: 875px) {
+  .banner-text {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .banner {
+    justify-content: flex-start;
+  }
+
+  .banner-text {
+    font-size: 30px;
+    width: 300px;
+    padding: 30px 102px 32px 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner-text {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .banner-container {
+    width: 335px;
+    height: 130px;
+  }
+
+  .banner {
+    justify-content: flex-start;
+  }
+
+  .banner-text {
+    font-size: 24px;
+    width: 217px;
+    height: 48px;
+  }
+}

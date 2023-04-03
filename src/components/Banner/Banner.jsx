@@ -2,7 +2,7 @@ import banner from "../../assets/banner_home.png";
 
 function Banner() {
   return (
-    <div className="banner-container padding-cotes">
+    <div className="banner-container">
       <div className="banner">
         <div className="photo-container">
           <img className="banner-photo" src={banner} alt="bannière paysage" />
