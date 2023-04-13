@@ -1,57 +1,87 @@
 import "../FicheLogement/FicheLogement.css";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Error from "../Error/Error";
+import Carousel from "../../components/Carousel/Carousel";
 
 function FicheLogement() {
+  const [logement, setLogement] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const equipments = logement?.equipments;
+  const stuff = equipments?.map((item, index) => (
+    <li key={index} className="equipments-list">
+      {item}
+    </li>
+  ));
+
+  let { id } = useParams();
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("../../data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const logementTrouve = data.find((item) => item.id === id);
+        if (logementTrouve === undefined) {
+          setError(true);
+        } else {
+          console.log(logementTrouve);
+          setLogement(logementTrouve);
+        }
+
+        setIsLoading(false);
+        console.log(logementTrouve);
+      })
+      .catch((error) => console.log(error));
+  }, [id]);
+
+  if (error) return <Error />;
+
   return (
-    <div className="fiche-logement">
-      <section className="host-info">
-        <div className="title-tag">
-          <div className="title">
-            <h1>Cozy loft on the Canal Saint-Martin</h1>
-            <h3>Paris, Ile-de-France</h3>
-          </div>
-          <div className="tag-container">
-            <div className="tag">Cozy</div>
-            <div className="tag">Canal</div>
-            <div className="tag">Paris 10</div>
-          </div>
-        </div>
-        <div className="host-rating">
-          <div className="host">
-            <div className="host-name">Alexandre Dumas</div>
-            <img
-              src="https://picsum.photos/50/50?random=1"
-              alt="Random host pic"
-            />
-          </div>
-          <div className="rating">
-            <div className="score">8.5/10</div>
-          </div>
-        </div>
-      </section>
-      <div className="description-equipment">
-        <div className="description">
-          <div className="description-title">Description</div>
-          <div className="description-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            lectus elit. Vestibulum ante ipsum primis in faucibus orci luctus et
-            ultrices posuere cubilia Curae; Proin fermentum lobortis quam at
-            facilisis. Maecenas sit amet eleifend arcu, vel euismod elit.
-            Vestibulum vitae nisi ut nisl elementum fringilla sed sit amet orci.
-            Sed at suscipit velit, in viverra tellus.
-          </div>
-        </div>
-        <div className="equipments">
-          <div className="equipments-title">Équipements</div>
-          <div className="equipments-text">
-            Nullam ullamcorper ex eget erat facilisis bibendum. Praesent rutrum
-            in lorem ac ultricies. Fusce vel pharetra sapien. Donec vestibulum,
-            lectus quis sagittis pharetra, mauris libero tristique odio, a
-            lacinia odio lacus a sapien. Ut consequat diam eget sem
-            pellentesque, in bibendum ante sagittis. Ut ac justo eu massa congue
-            interdum. Sed luctus pharetra lorem, eu pretium sapien iaculis vel.
+    <div>
+      <Carousel />
+      {!isLoading ? (
+        <div className="fiche-logement">
+          <section className="host-info">
+            <div className="title-tag">
+              <div className="title">
+                <h1>{logement.title}</h1>
+                <h3>{logement.location}</h3>
+              </div>
+              <div className="tag-container">
+                <div className="tag">Cozy</div>
+                <div className="tag">Canal</div>
+                <div className="tag">Paris 10</div>
+              </div>
+            </div>
+            <div className="host-rating">
+              <div className="host">
+                <div className="host-name">Alexandre Dumas</div>
+                <img
+                  src="https://picsum.photos/50/50?random=1"
+                  alt="Random host pic"
+                />
+              </div>
+              <div className="rating">
+                <div className="score">8.5/10</div>
+              </div>
+            </div>
+          </section>
+          <div className="description-equipment">
+            <div className="description">
+              <div className="description-title">Description</div>
+              <div className="description-text">{logement.description}</div>
+            </div>
+            <div className="equipments">
+              <div className="equipments-title">Équipements</div>
+              <div className="equipments-text">{stuff}</div>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div>ERROR</div>
+      )}
     </div>
   );
 }

@@ -21,7 +21,7 @@ body {
   width: 310px;
   height: 35px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -41,13 +41,16 @@ body {
 
 @media screen and (max-width: 375px) {
   .header {
-    padding: 5px;
-    margin-bottom: 15px;
+    padding: 20px;
   }
 
   .logo-header {
     width: 145px;
     height: 47px;
+  }
+
+  .nav-header {
+    justify-content: flex-end;
   }
 
   .nav-header-link {

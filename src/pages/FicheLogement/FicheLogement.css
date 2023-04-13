@@ -17,7 +17,6 @@
   line-height: 50px;
   color: #ff6060;
   margin-bottom: 20px;
-  width: 80%;
 }
 
 .title h1 {
@@ -88,4 +87,43 @@
   font-size: 18px;
   line-height: 26px;
   margin-top: 35px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.description {
+  width: 50%;
+  padding: 10px;
+  background: #f7f7f7;
+}
+
+.description-text {
+  margin-top: 10px;
+}
+
+.equipments {
+  width: 30%;
+  padding: 10px;
+  background: #f7f7f7;
+}
+
+.equipments-text {
+  list-style: none;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+  .description-equipment {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .equipments {
+    width: 100%;
+  }
 }
