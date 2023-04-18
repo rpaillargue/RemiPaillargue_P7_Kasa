@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;500&display=swap");
+
+.about-banner {
+  background-color: red;
+}
+
+.collapse {
+  border-radius: 5px;
+  margin-bottom: 35px;
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.header-collapse {
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+
+.titre-collapse {
+  color: #ffffff;
+  margin: 5px 10px;
+}
+
+.arrow-collapse {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  width: 100%;
+}
+.arrow-collapse:hover {
+  cursor: pointer;
+}
+
+.arrow-collapse.true {
+  justify-content: start;
+  transform: rotate(-180deg);
+}
+
+.description-collapse {
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #ff6060;
+  height: 75%;
+  margin-top: -10px;
+  min-height: 100px;
+  padding: 25px 10px 10px 10px;
+}

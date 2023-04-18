@@ -8,6 +8,7 @@ function FicheLogement() {
   const [logement, setLogement] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+  const slidePics = logement && logement.pictures;
   const equipments = logement?.equipments;
   const stuff = equipments?.map((item, index) => (
     <li key={index} className="equipments-list">
@@ -40,7 +41,7 @@ function FicheLogement() {
 
   return (
     <div>
-      <Carousel />
+      <Carousel slides={slidePics} />
       {!isLoading ? (
         <div className="fiche-logement">
           <section className="host-info">
@@ -57,11 +58,8 @@ function FicheLogement() {
             </div>
             <div className="host-rating">
               <div className="host">
-                <div className="host-name">Alexandre Dumas</div>
-                <img
-                  src="https://picsum.photos/50/50?random=1"
-                  alt="Random host pic"
-                />
+                <div className="host-name">{logement?.host?.name}</div>
+                <img src={logement?.host?.picture} alt="Random host pic" />
               </div>
               <div className="rating">
                 <div className="score">8.5/10</div>

@@ -12,14 +12,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 50px;
+  gap: 50px;
   padding-bottom: 20px;
+  padding: 50px;
 }
 
 .card-logement {
   border-radius: 10px;
   height: 340px;
-  width: 30%;
+  width: 26%;
   overflow: hidden;
   position: relative;
   margin: 20px;
@@ -57,14 +58,17 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-@media only screen and (max-width: 1200px) {
+/* Version tablette */
+@media only screen and (max-width: 1199px) {
   .logement-container {
-    width: 100%;
+    gap: 50px;
+    padding: 50px;
   }
 
   .card-logement {
-    margin: 10px;
-    height: auto;
+    margin: 0;
+    height: 200px;
+    width: 27%;
   }
 
   .card-logement-title {
@@ -72,24 +76,26 @@
   }
 }
 
-@media only screen and (max-width: 905px) {
+/* Version mobile */
+@media only screen and (max-width: 767px) {
   .card-logement {
     width: 100%;
-    height: auto;
-    margin: 20px;
+    margin: 0;
+    height: 255px;
   }
 
   .card-logement-title {
     font-size: 18px;
   }
-}
 
-@media only screen and (max-width: 375px) {
-  .logement-container {
-    row-gap: 20px;
+  .section-container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .card-logement {
-    height: 225px;
-    margin: 10px;
+
+  .logement-container {
+    background-color: transparent;
+    row-gap: 20px;
+    padding: 0;
   }
 }
