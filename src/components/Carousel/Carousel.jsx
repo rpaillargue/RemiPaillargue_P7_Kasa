@@ -4,14 +4,14 @@ import arrowRight from "../../assets/arrow-right.png";
 import "../Carousel/carousel.css";
 
 function Carousel({ slides }) {
-  const [current, setCurrent] = useState(0); //je définie l'index du premier slide à 0
-  const length = slides.length; // longueur du tableau de slides
+  const [current, setCurrent] = useState(0);
+  const length = slides.lenght;
 
   const handleNext = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1); // on repart au premier slide quand on arrive au dernier
+    setCurrent(current === length - 1 ? 0 : current + 1);
   };
   const handlePrevious = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1); // on repart au dernier slide quand on est au premier
+    setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
   return (

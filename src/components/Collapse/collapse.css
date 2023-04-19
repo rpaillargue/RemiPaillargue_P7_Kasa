@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;500&display=swap");
 
-.about-banner {
-  background-color: red;
-}
-
 .collapse {
   border-radius: 5px;
   margin-bottom: 35px;
@@ -25,7 +21,7 @@
   width: 100%;
 }
 
-.titre-collapse {
+.title-collapse {
   color: #ffffff;
   margin: 5px 10px;
 }

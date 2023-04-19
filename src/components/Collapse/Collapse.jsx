@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import arrow from "../../assets/arrow-down.png";
 import "../Collapse/collapse.css";
 
-function Collapse({ titre, description }) {
+function Collapse({ title, description }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="collapse" id={`collapse-${titre}`}>
+    <div className="collapse" id={`collapse-${title}`}>
       <div className="header-collapse">
-        <div className="titre-collapse">{titre}</div>
+        <div className="title-collapse">{title}</div>
         <span
           className={`arrow-collapse ${open}`}
           onClick={() => setOpen(!open)}
