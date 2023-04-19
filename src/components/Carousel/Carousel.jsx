@@ -5,30 +5,29 @@ import "../Carousel/carousel.css";
 
 function Carousel({ slides }) {
   const [current, setCurrent] = useState(0);
-  const length = slides.lenght;
 
   const handleNext = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent(current === slides.length - 1 ? 0 : current + 1);
   };
   const handlePrevious = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent(current === 0 ? slides.length - 1 : current - 1);
   };
 
   return (
-    <section class="carousel-container">
-      <div class="carousel">
+    <section className="carousel-container">
+      <div className="carousel">
         {slides.map((slide, index) => (
           <div key={index}>
             {index === current && (
               <img
                 src={slide}
-                class="carousel-pic"
+                className="carousel-pic"
                 alt="location appartement"
               />
             )}
             {index === current && (
-              <span class="slider-number">
-                {current + 1}/{length}
+              <span className="slider-number">
+                {current + 1}/{slides.length}
               </span>
             )}
           </div>
@@ -36,13 +35,13 @@ function Carousel({ slides }) {
         <img
           src={arrowLeft}
           alt="gauche"
-          class="left-arrow"
+          className="left-arrow"
           onClick={handlePrevious}
         />
         <img
           src={arrowRight}
           alt="droite"
-          class="right-arrow"
+          className="right-arrow"
           onClick={handleNext}
         />
       </div>
