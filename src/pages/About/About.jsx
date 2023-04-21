@@ -1,5 +1,7 @@
 import Collapse from "../../components/Collapse/Collapse";
 import "../../components/Collapse/collapse.css";
+import "../About/About.css"
+
 
 function About() {
   return (

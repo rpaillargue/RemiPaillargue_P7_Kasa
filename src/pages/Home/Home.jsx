@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
 import "../../components/Card/card.css";
 
+
 function Home() {
   const [logements, setLogements] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

@@ -72,7 +72,7 @@
   }
 
   .card-logement-title {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -83,6 +83,7 @@
     margin: 0;
     height: 255px;
   }
+
 
   .card-logement-title {
     font-size: 18px;
