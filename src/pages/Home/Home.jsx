@@ -1,9 +1,10 @@
+import React from "react";
 import Banner from "../../components/Banner/Banner";
 import "../../components/Banner/banner.css";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
 import "../../components/Card/card.css";
-
+import bannerHome from "../../assets/banner_home.png";
 
 function Home() {
   const [logements, setLogements] = useState([]);
@@ -22,7 +23,7 @@ function Home() {
 
   return (
     <div className="section-container">
-      <Banner />
+      <Banner pic={bannerHome} text="Chez vous, partout et ailleurs" />
       <div className="logement-container">
         {!isLoading &&
           logements.map((logement) => (

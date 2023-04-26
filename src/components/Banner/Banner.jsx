@@ -1,14 +1,12 @@
-import banner from "../../assets/banner_home.png";
-
-function Banner() {
+function Banner({ pic, text }) {
   return (
     <div className="banner-container">
       <div className="banner">
         <div className="photo-container">
-          <img className="banner-photo" src={banner} alt="bannière paysage" />
+          <img className="banner-photo" src={pic} alt="bannière paysage" />
           <div className="banner-shadow"></div>
         </div>
-        <p className="banner-text">Chez vous, partout et ailleurs</p>
+        <p className="banner-text">{text}</p>
       </div>
     </div>
   );
