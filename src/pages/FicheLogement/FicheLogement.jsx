@@ -3,13 +3,16 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Error from "../Error/Error";
 import Carousel from "../../components/Carousel/Carousel";
+import Tag from "../../components/Tag/Tag";
 
 function FicheLogement() {
   const [logement, setLogement] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+
   const slidePics = logement && logement.pictures;
   const equipments = logement?.equipments;
+  const tags = logement && logement.tags;
   const stuff = equipments?.map((item, index) => (
     <li key={index} className="equipments-list">
       {item}
@@ -51,9 +54,9 @@ function FicheLogement() {
                 <h3>{logement.location}</h3>
               </div>
               <div className="tag-container">
-                <div className="tag">Cozy</div>
-                <div className="tag">Canal</div>
-                <div className="tag">Paris 10</div>
+                {tags.map((tag) => (
+                  <Tag key={tag} tag={tag} />
+                ))}
               </div>
             </div>
             <div className="host-rating">

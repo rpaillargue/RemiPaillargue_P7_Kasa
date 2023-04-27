@@ -4,30 +4,31 @@ import arrowRight from "../../assets/arrow-right.png";
 import "../Carousel/carousel.css";
 
 function Carousel({ slides }) {
-  const [current, setCurrent] = useState(0);
+  const [currentPic, setCurrentPic] = useState(0);
+  const lenghtPic = slides?.length;
 
   const handleNext = () => {
-    setCurrent(current === slides.length - 1 ? 0 : current + 1);
+    setCurrentPic(currentPic === lenghtPic - 1 ? 0 : currentPic + 1);
   };
   const handlePrevious = () => {
-    setCurrent(current === 0 ? slides.length - 1 : current - 1);
+    setCurrentPic(currentPic === 0 ? lenghtPic - 1 : currentPic - 1);
   };
 
   return (
     <section className="carousel-container">
       <div className="carousel">
-        {slides.map((slide, index) => (
+        {slides?.map((slide, index) => (
           <div key={index}>
-            {index === current && (
+            {index === currentPic && (
               <img
                 src={slide}
                 className="carousel-pic"
                 alt="location appartement"
               />
             )}
-            {index === current && (
+            {index === currentPic && (
               <span className="slider-number">
-                {current + 1}/{slides.length}
+                {currentPic + 1}/{lenghtPic}
               </span>
             )}
           </div>

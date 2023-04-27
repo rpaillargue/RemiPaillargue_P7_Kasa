@@ -7,13 +7,15 @@
 
 .carousel {
   position: relative;
+  padding: 0 50px;
+  width: 100%;
 }
 
 .carousel-pic {
   display: block;
-  margin: 0 auto;
   border-radius: 25px;
   object-fit: cover;
+  width: 100%;
 }
 
 .slider-number {
@@ -26,6 +28,7 @@
   font-weight: 500;
   font-family: Montserrat, sans-serif;
 }
+
 .left-arrow,
 .right-arrow {
   position: absolute;
@@ -35,9 +38,25 @@
 }
 
 .left-arrow {
-  left: 2%;
+  left: 50px;
 }
 
 .right-arrow {
-  right: 2%;
+  right: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel {
+    padding: 0 20px;
+  }
+
+  .left-arrow {
+    left: 20px;
+    width: 50px;
+  }
+
+  .right-arrow {
+    right: 20px;
+    width: 50px;
+  }
 }
