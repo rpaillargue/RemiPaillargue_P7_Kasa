@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import Error from "../Error/Error";
 import Carousel from "../../components/Carousel/Carousel";
 import Tag from "../../components/Tag/Tag";
+import Rate from "../../components/Rate/Rate";
+import Collapse from "../../components/Collapse/Collapse";
 
 function FicheLogement() {
   const [logement, setLogement] = useState([]);
@@ -50,11 +52,11 @@ function FicheLogement() {
           <section className="host-info">
             <div className="title-tag">
               <div className="title">
-                <h1>{logement.title}</h1>
-                <h3>{logement.location}</h3>
+                <span className="title-logement">{logement.title}</span>
+                <span className="location-logement">{logement.location}</span>
               </div>
               <div className="tag-container">
-                {tags.map((tag) => (
+                {tags?.map((tag) => (
                   <Tag key={tag} tag={tag} />
                 ))}
               </div>
@@ -65,19 +67,13 @@ function FicheLogement() {
                 <img src={logement?.host?.picture} alt="Random host pic" />
               </div>
               <div className="rating">
-                <div className="score">8.5/10</div>
+                <Rate score={logement?.rating} />
               </div>
             </div>
           </section>
           <div className="description-equipment">
-            <div className="description">
-              <div className="description-title">Description</div>
-              <div className="description-text">{logement.description}</div>
-            </div>
-            <div className="equipments">
-              <div className="equipments-title">Équipements</div>
-              <div className="equipments-text">{stuff}</div>
-            </div>
+            <Collapse title="Description" description={logement?.description} />
+            <Collapse title="Équipements" description={stuff} />
           </div>
         </div>
       ) : (
