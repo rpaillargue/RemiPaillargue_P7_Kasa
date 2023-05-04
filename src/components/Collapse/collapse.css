@@ -50,3 +50,37 @@
   min-height: 100px;
   padding: 25px 10px 10px 10px;
 }
+
+@media only screen and (max-width: 768px) {
+  .collapse {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .title-collapse {
+    font-size: 22px;
+  }
+
+  .description-collapse {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .about {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .title-collapse {
+    font-size: 18px;
+  }
+
+  .collapse {
+    padding: 0;
+  }
+
+  .description-collapse {
+    font-size: 15px;
+  }
+}

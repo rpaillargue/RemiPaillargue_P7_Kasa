@@ -72,8 +72,16 @@ function FicheLogement() {
             </div>
           </section>
           <div className="description-equipment">
-            <Collapse title="Description" description={logement?.description} />
-            <Collapse title="Équipements" description={stuff} />
+            <Collapse
+              title="Description"
+              description={logement?.description}
+              className="logement-description"
+            />
+            <Collapse
+              title="Équipements"
+              description={stuff}
+              className="logement-equipement"
+            />
           </div>
         </div>
       ) : (
