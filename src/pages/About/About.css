@@ -2,3 +2,17 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+
+
+@media screen and (max-width: 426px) {
+  .about {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about > .collapse {
+    padding-left: 0;
+    padding-right: 0;
+    
+  }
+}

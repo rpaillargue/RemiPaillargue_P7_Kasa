@@ -104,3 +104,49 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .fiche-logement {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .title-logement {
+    font-size: 26px;
+  }
+
+  .location-logement {
+    font-size: 16px;
+  }
+
+  .host-rating {
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .host {
+    align-items: flex-end;
+  }
+
+  .description-equipment > .collapse {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .tag-container {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .tag {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .stars {
+    width: 30px;
+  }
+}

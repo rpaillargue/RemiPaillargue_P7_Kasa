@@ -45,7 +45,7 @@ function FicheLogement() {
   if (error) return <Error />;
 
   return (
-    <div>
+    <div className="fiche-logement-container">
       <Carousel slides={slidePics} />
       {!isLoading ? (
         <div className="fiche-logement">

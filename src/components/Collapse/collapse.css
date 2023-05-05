@@ -5,7 +5,6 @@
   margin-bottom: 35px;
   text-align: left;
   font-family: Montserrat, sans-serif;
-  font-size: 24px;
   font-weight: 400;
   padding-left: 100px;
   padding-right: 100px;
@@ -24,6 +23,7 @@
 .title-collapse {
   color: #ffffff;
   margin: 5px 10px;
+  font-size: 20px;
 }
 
 .arrow-collapse {
@@ -46,9 +46,14 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #ff6060;
+  font-size: 18px;
   height: 75%;
   min-height: 100px;
   padding: 25px 10px 10px 10px;
+}
+
+.equipments-list {
+  list-style: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -66,7 +71,7 @@
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
   .about {
     padding-left: 20px;
     padding-right: 20px;
