@@ -58,8 +58,8 @@
 
 @media only screen and (max-width: 768px) {
   .collapse {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .title-collapse {
@@ -72,11 +72,6 @@
 }
 
 @media only screen and (max-width: 426px) {
-  .about {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .title-collapse {
     font-size: 18px;
   }

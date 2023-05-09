@@ -18,7 +18,7 @@ function Carousel({ slides }) {
     <section className="carousel-container">
       <div className="carousel">
         {slides?.map((slide, index) => (
-          <div key={index}>
+          <div key={index} className="item-carousel">
             {index === currentPic && (
               <img
                 src={slide}

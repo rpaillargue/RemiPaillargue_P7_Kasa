@@ -6,7 +6,7 @@ function Banner({ pic, text }) {
           <img className="banner-photo" src={pic} alt="bannière paysage" />
           <div className="banner-shadow"></div>
         </div>
-        <p className="banner-text">{text}</p>
+        {text && <p className="banner-text">{text}</p>}
       </div>
     </div>
   );
