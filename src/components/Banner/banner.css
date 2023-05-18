@@ -58,15 +58,8 @@
   }
 
   .banner-text {
-    font-size: 30px;
-    width: 300px;
+    font-size: 22px;
     padding: 30px 102px 32px 15px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .banner-text {
-    font-size: 25px;
   }
 }
 
@@ -74,10 +67,6 @@
   .banner-container {
     width: 335px;
     height: 130px;
-  }
-
-  .banner {
-    justify-content: flex-start;
   }
 
   .banner-text {

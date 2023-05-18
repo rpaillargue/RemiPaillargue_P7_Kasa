@@ -23,7 +23,7 @@
 .title-collapse {
   color: #ffffff;
   margin: 5px 10px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .arrow-collapse {
@@ -46,7 +46,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #ff6060;
-  font-size: 22px;
+  font-size: 18px;
   height: 75%;
   min-height: 100px;
   padding: 25px 10px 10px 10px;
@@ -71,9 +71,9 @@
   }
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 525px) {
   .title-collapse {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .collapse {
@@ -81,6 +81,6 @@
   }
 
   .description-collapse {
-    font-size: 15px;
+    font-size: 12px;
   }
 }

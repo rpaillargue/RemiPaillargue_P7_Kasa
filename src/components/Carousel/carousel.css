@@ -3,6 +3,7 @@
 .carousel-container {
   display: flex;
   justify-content: center;
+  height: 415px;
 }
 
 .carousel {
@@ -16,6 +17,11 @@
   border-radius: 25px;
   object-fit: cover;
   width: 100%;
+  height: 100%;
+}
+
+.item-carousel {
+  height: 100%;
 }
 
 .slider-number {

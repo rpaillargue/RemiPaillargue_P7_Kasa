@@ -45,7 +45,7 @@
 .host-name {
   font-family: Montserrat, sans-serif;
   color: #ff6060;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   width: 93px;
   height: 52px;
@@ -58,6 +58,7 @@
   margin-left: 5px;
   object-fit: cover;
   width: 64px;
+  height: 64px;
 }
 
 .rating {
@@ -135,20 +136,37 @@
 }
 
 @media only screen and (max-width: 525px) {
+  .title-logement {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .location-logement {
+    font-size: 14px;
+  }
+
   .tag-container {
     margin-bottom: 10px;
-    width: 120px;
+    width: 110px;
+    height: 18px;
   }
 
   .tag {
-    width: 50px;
     font-size: 10px;
-    padding: 20px;
   }
-}
 
-@media only screen and (max-width: 375px) {
+  .host-name {
+    font-size: 12px;
+    width: 93px;
+    height: 33px;
+  }
+
+  .host img {
+    width: 32px;
+    height: 32px;
+  }
+
   .stars {
-    width: 30px;
+    width: 18px;
   }
 }
