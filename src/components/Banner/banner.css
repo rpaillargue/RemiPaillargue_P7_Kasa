@@ -52,11 +52,9 @@
   }
 }
 
-@media only screen and (max-width: 660px) {
-  .banner {
-    justify-content: flex-start;
-  }
 
+
+@media only screen and (max-width: 425px) {
   .banner-text {
     font-size: 22px;
     padding: 30px 102px 32px 15px;
