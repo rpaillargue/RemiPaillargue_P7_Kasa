@@ -5,34 +5,38 @@ import "../Carousel/carousel.css";
 
 function Carousel({ slides }) {
   const [currentPic, setCurrentPic] = useState(0);
-  const lenghtPic = slides?.length;
+  const lengthPic = slides?.length;
 
   const handleNext = () => {
-    setCurrentPic(currentPic === lenghtPic - 1 ? 0 : currentPic + 1);
+    setCurrentPic((currentPic + 1) % lengthPic);
   };
+
   const handlePrevious = () => {
-    setCurrentPic(currentPic === 0 ? lenghtPic - 1 : currentPic - 1);
+    setCurrentPic((currentPic - 1 + lengthPic) % lengthPic);
   };
 
   return (
     <section className="carousel-container">
       <div className="carousel">
-        {slides?.map((slide, index) => (
-          <div key={index} className="item-carousel">
-            {index === currentPic && (
+        <div className="carousel-wrapper">
+          {slides?.map((slide, index) => (
+            <div
+              key={index}
+              className={`item-carousel ${
+                index === currentPic ? "active" : ""
+              }`}
+            >
               <img
                 src={slide}
                 className="carousel-pic"
                 alt="location appartement"
               />
-            )}
-            {index === currentPic && (
-              <span className="slider-number">
-                {currentPic + 1}/{lenghtPic}
-              </span>
-            )}
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
+        <span className="slider-number">
+          {currentPic + 1}/{lengthPic}
+        </span>
         <img
           src={arrowLeft}
           alt="gauche"
@@ -49,5 +53,4 @@ function Carousel({ slides }) {
     </section>
   );
 }
-
 export default Carousel;
