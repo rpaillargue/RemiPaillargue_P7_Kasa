@@ -32,12 +32,10 @@ function FicheLogement() {
         if (logementTrouve === undefined) {
           setError(true);
         } else {
-          console.log(logementTrouve);
           setLogement(logementTrouve);
         }
 
         setIsLoading(false);
-        console.log(logementTrouve);
       })
       .catch((error) => console.log(error));
   }, [id]);
