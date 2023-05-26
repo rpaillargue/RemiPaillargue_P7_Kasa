@@ -12,9 +12,12 @@ function FicheLogement() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  // Extraction des données du logement
   const slidePics = logement && logement.pictures;
   const equipments = logement?.equipments;
   const tags = logement && logement.tags;
+
+  // Génération de la liste d'équipements
   const stuff = equipments?.map((item, index) => (
     <li key={index} className="equipments-list">
       {item}
@@ -25,10 +28,15 @@ function FicheLogement() {
 
   useEffect(() => {
     setIsLoading(true);
+
+    // Récupération des données depuis le fichier JSON
     fetch("../../data.json")
       .then((response) => response.json())
       .then((data) => {
+        // Recherche du logement correspondant à l'ID
         const logementTrouve = data.find((item) => item.id === id);
+
+        // Vérification de la présence du logement
         if (logementTrouve === undefined) {
           setError(true);
         } else {
@@ -40,6 +48,7 @@ function FicheLogement() {
       .catch((error) => console.log(error));
   }, [id]);
 
+  // Affichage de la page d'erreur si le logement est introuvable
   if (error) return <Error />;
 
   return (

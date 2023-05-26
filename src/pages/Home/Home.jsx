@@ -12,6 +12,8 @@ function Home() {
 
   useEffect(() => {
     setIsLoading(true);
+
+    // Récupération des données depuis le fichier JSON
     fetch("./data.json")
       .then((response) => response.json())
       .then((data) => {
