@@ -30,7 +30,6 @@ function FicheLogement() {
     setIsLoading(true);
 
     // Récupération des données depuis le fichier JSON
-    console.log(window.location.origin);
     fetch(window.location.origin + process.env.REACT_APP_DATA_URL)
       .then((response) => response.json())
       .then((data) => {

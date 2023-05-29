@@ -39,23 +39,29 @@ function Carousel({ slides }) {
           ))}
         </div>
         {/* Affiche le numéro de la photo actuelle */}
-        <span className="slider-number">
-          {currentPic + 1}/{lengthPic}
-        </span>
-        {/* Flèche gauche pour passer à la photo précédente */}
-        <img
-          src={arrowLeft}
-          alt="gauche"
-          className="left-arrow"
-          onClick={handlePrevious}
-        />
-        {/* Flèche droite pour passer à la photo suivante */}
-        <img
-          src={arrowRight}
-          alt="droite"
-          className="right-arrow"
-          onClick={handleNext}
-        />
+        {lengthPic > 1 && (
+          <span className="slider-number">
+            {currentPic + 1}/{lengthPic}
+          </span>
+        )}
+        {lengthPic > 1 && (
+          <>
+            {/* Flèche gauche pour passer à la photo précédente */}
+            <img
+              src={arrowLeft}
+              alt="gauche"
+              className="left-arrow"
+              onClick={handlePrevious}
+            />
+            {/* Flèche droite pour passer à la photo suivante */}
+            <img
+              src={arrowRight}
+              alt="droite"
+              className="right-arrow"
+              onClick={handleNext}
+            />
+          </>
+        )}
       </div>
     </section>
   );
