@@ -39,7 +39,7 @@
 /* Host & Rate */
 .host {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .host-name {
@@ -88,12 +88,18 @@
     flex-direction: column;
   }
 
-  .title {
-    font-size: 12px;
+  .title-logement {
+    font-size: 28px;
+  }
+
+  .location-logement {
+    font-size: 18px;
   }
 
   .host-rating {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .description {
@@ -103,6 +109,14 @@
 
   .equipments {
     width: 100%;
+  }
+
+  .description-equipment > .collapse {
+    width: 100%;
+  }
+
+  .stars {
+    width: 22px;
   }
 }
 
@@ -164,6 +178,14 @@
   .host img {
     width: 32px;
     height: 32px;
+  }
+
+  .rating {
+    margin: 0;
+  }
+
+  .host-rating {
+    margin-top: 30px;
   }
 
   .stars {

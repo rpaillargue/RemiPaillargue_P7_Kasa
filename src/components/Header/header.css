@@ -21,14 +21,14 @@ body {
   width: 310px;
   height: 35px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .nav-header-link {
   text-decoration: none;
   color: #ff6060;
-  margin-left: 10px;
+  margin-left: 30px;
   margin-right: 10px;
   font-family: Montserrat, sans-serif;
   font-size: 16px;

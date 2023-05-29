@@ -14,7 +14,7 @@ function Home() {
     setIsLoading(true);
 
     // Récupération des données depuis le fichier JSON
-    fetch("./data.json")
+    fetch(window.location.origin + process.env.REACT_APP_DATA_URL)
       .then((response) => response.json())
       .then((data) => {
         setLogements(data);
